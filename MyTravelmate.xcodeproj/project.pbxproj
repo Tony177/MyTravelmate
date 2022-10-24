@@ -1,0 +1,669 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EA66534E2906CEDB00C98565 /* MyTravelmateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA66534D2906CEDB00C98565 /* MyTravelmateApp.swift */; };
+		EA6653502906CEDB00C98565 /* mainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA66534F2906CEDB00C98565 /* mainView.swift */; };
+		EA6653522906CEDC00C98565 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA6653512906CEDC00C98565 /* Assets.xcassets */; };
+		EA6653562906CEDC00C98565 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA6653552906CEDC00C98565 /* Preview Assets.xcassets */; };
+		EA6653602906CEDC00C98565 /* MyTravelmateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA66535F2906CEDC00C98565 /* MyTravelmateTests.swift */; };
+		EA66536A2906CEDC00C98565 /* MyTravelmateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6653692906CEDC00C98565 /* MyTravelmateUITests.swift */; };
+		EA66536C2906CEDC00C98565 /* MyTravelmateUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA66536B2906CEDC00C98565 /* MyTravelmateUITestsLaunchTests.swift */; };
+		EA66537A2906CFDE00C98565 /* filterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6653792906CFDE00C98565 /* filterView.swift */; };
+		EA66537C2906D02900C98565 /* cityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA66537B2906D02900C98565 /* cityView.swift */; };
+		EA66537E2906D05B00C98565 /* city.json in Resources */ = {isa = PBXBuildFile; fileRef = EA66537D2906D05B00C98565 /* city.json */; };
+		EA6653812906D08300C98565 /* cityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6653802906D08300C98565 /* cityModel.swift */; };
+		EA6653842906D0B600C98565 /* dataStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6653832906D0B600C98565 /* dataStructure.swift */; };
+		EA6653862906D0F500C98565 /* cardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6653852906D0F500C98565 /* cardView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EA66535C2906CEDC00C98565 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA6653422906CEDB00C98565 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA6653492906CEDB00C98565;
+			remoteInfo = MyTravelmate;
+		};
+		EA6653662906CEDC00C98565 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA6653422906CEDB00C98565 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA6653492906CEDB00C98565;
+			remoteInfo = MyTravelmate;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EA66534A2906CEDB00C98565 /* MyTravelmate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTravelmate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA66534D2906CEDB00C98565 /* MyTravelmateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTravelmateApp.swift; sourceTree = "<group>"; };
+		EA66534F2906CEDB00C98565 /* mainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainView.swift; sourceTree = "<group>"; };
+		EA6653512906CEDC00C98565 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EA6653532906CEDC00C98565 /* MyTravelmate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyTravelmate.entitlements; sourceTree = "<group>"; };
+		EA6653552906CEDC00C98565 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EA66535B2906CEDC00C98565 /* MyTravelmateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyTravelmateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA66535F2906CEDC00C98565 /* MyTravelmateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTravelmateTests.swift; sourceTree = "<group>"; };
+		EA6653652906CEDC00C98565 /* MyTravelmateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyTravelmateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA6653692906CEDC00C98565 /* MyTravelmateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTravelmateUITests.swift; sourceTree = "<group>"; };
+		EA66536B2906CEDC00C98565 /* MyTravelmateUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTravelmateUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EA6653792906CFDE00C98565 /* filterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = filterView.swift; sourceTree = "<group>"; };
+		EA66537B2906D02900C98565 /* cityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cityView.swift; sourceTree = "<group>"; };
+		EA66537D2906D05B00C98565 /* city.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = city.json; sourceTree = "<group>"; };
+		EA6653802906D08300C98565 /* cityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cityModel.swift; sourceTree = "<group>"; };
+		EA6653832906D0B600C98565 /* dataStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataStructure.swift; sourceTree = "<group>"; };
+		EA6653852906D0F500C98565 /* cardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EA6653472906CEDB00C98565 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA6653582906CEDC00C98565 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA6653622906CEDC00C98565 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EA6653412906CEDB00C98565 = {
+			isa = PBXGroup;
+			children = (
+				EA66537F2906D06500C98565 /* Data */,
+				EA6653782906CFD300C98565 /* View */,
+				EA6653822906D09F00C98565 /* Model */,
+				EA66534C2906CEDB00C98565 /* MyTravelmate */,
+				EA66535E2906CEDC00C98565 /* MyTravelmateTests */,
+				EA6653682906CEDC00C98565 /* MyTravelmateUITests */,
+				EA66534B2906CEDB00C98565 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EA66534B2906CEDB00C98565 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA66534A2906CEDB00C98565 /* MyTravelmate.app */,
+				EA66535B2906CEDC00C98565 /* MyTravelmateTests.xctest */,
+				EA6653652906CEDC00C98565 /* MyTravelmateUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA66534C2906CEDB00C98565 /* MyTravelmate */ = {
+			isa = PBXGroup;
+			children = (
+				EA66534D2906CEDB00C98565 /* MyTravelmateApp.swift */,
+				EA6653852906D0F500C98565 /* cardView.swift */,
+				EA6653512906CEDC00C98565 /* Assets.xcassets */,
+				EA6653532906CEDC00C98565 /* MyTravelmate.entitlements */,
+				EA6653542906CEDC00C98565 /* Preview Content */,
+			);
+			path = MyTravelmate;
+			sourceTree = "<group>";
+		};
+		EA6653542906CEDC00C98565 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				EA6653552906CEDC00C98565 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EA66535E2906CEDC00C98565 /* MyTravelmateTests */ = {
+			isa = PBXGroup;
+			children = (
+				EA66535F2906CEDC00C98565 /* MyTravelmateTests.swift */,
+			);
+			path = MyTravelmateTests;
+			sourceTree = "<group>";
+		};
+		EA6653682906CEDC00C98565 /* MyTravelmateUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EA6653692906CEDC00C98565 /* MyTravelmateUITests.swift */,
+				EA66536B2906CEDC00C98565 /* MyTravelmateUITestsLaunchTests.swift */,
+			);
+			path = MyTravelmateUITests;
+			sourceTree = "<group>";
+		};
+		EA6653782906CFD300C98565 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA66534F2906CEDB00C98565 /* mainView.swift */,
+				EA6653792906CFDE00C98565 /* filterView.swift */,
+				EA66537B2906D02900C98565 /* cityView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EA66537F2906D06500C98565 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				EA6653832906D0B600C98565 /* dataStructure.swift */,
+				EA66537D2906D05B00C98565 /* city.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		EA6653822906D09F00C98565 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA6653802906D08300C98565 /* cityModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EA6653492906CEDB00C98565 /* MyTravelmate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA66536F2906CEDC00C98565 /* Build configuration list for PBXNativeTarget "MyTravelmate" */;
+			buildPhases = (
+				EA6653462906CEDB00C98565 /* Sources */,
+				EA6653472906CEDB00C98565 /* Frameworks */,
+				EA6653482906CEDB00C98565 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyTravelmate;
+			productName = MyTravelmate;
+			productReference = EA66534A2906CEDB00C98565 /* MyTravelmate.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EA66535A2906CEDC00C98565 /* MyTravelmateTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA6653722906CEDC00C98565 /* Build configuration list for PBXNativeTarget "MyTravelmateTests" */;
+			buildPhases = (
+				EA6653572906CEDC00C98565 /* Sources */,
+				EA6653582906CEDC00C98565 /* Frameworks */,
+				EA6653592906CEDC00C98565 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA66535D2906CEDC00C98565 /* PBXTargetDependency */,
+			);
+			name = MyTravelmateTests;
+			productName = MyTravelmateTests;
+			productReference = EA66535B2906CEDC00C98565 /* MyTravelmateTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EA6653642906CEDC00C98565 /* MyTravelmateUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA6653752906CEDC00C98565 /* Build configuration list for PBXNativeTarget "MyTravelmateUITests" */;
+			buildPhases = (
+				EA6653612906CEDC00C98565 /* Sources */,
+				EA6653622906CEDC00C98565 /* Frameworks */,
+				EA6653632906CEDC00C98565 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA6653672906CEDC00C98565 /* PBXTargetDependency */,
+			);
+			name = MyTravelmateUITests;
+			productName = MyTravelmateUITests;
+			productReference = EA6653652906CEDC00C98565 /* MyTravelmateUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EA6653422906CEDB00C98565 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					EA6653492906CEDB00C98565 = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+					EA66535A2906CEDC00C98565 = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = EA6653492906CEDB00C98565;
+					};
+					EA6653642906CEDC00C98565 = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = EA6653492906CEDB00C98565;
+					};
+				};
+			};
+			buildConfigurationList = EA6653452906CEDB00C98565 /* Build configuration list for PBXProject "MyTravelmate" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EA6653412906CEDB00C98565;
+			productRefGroup = EA66534B2906CEDB00C98565 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EA6653492906CEDB00C98565 /* MyTravelmate */,
+				EA66535A2906CEDC00C98565 /* MyTravelmateTests */,
+				EA6653642906CEDC00C98565 /* MyTravelmateUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EA6653482906CEDB00C98565 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA66537E2906D05B00C98565 /* city.json in Resources */,
+				EA6653562906CEDC00C98565 /* Preview Assets.xcassets in Resources */,
+				EA6653522906CEDC00C98565 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA6653592906CEDC00C98565 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA6653632906CEDC00C98565 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EA6653462906CEDB00C98565 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA6653502906CEDB00C98565 /* mainView.swift in Sources */,
+				EA6653862906D0F500C98565 /* cardView.swift in Sources */,
+				EA66537C2906D02900C98565 /* cityView.swift in Sources */,
+				EA66534E2906CEDB00C98565 /* MyTravelmateApp.swift in Sources */,
+				EA6653812906D08300C98565 /* cityModel.swift in Sources */,
+				EA66537A2906CFDE00C98565 /* filterView.swift in Sources */,
+				EA6653842906D0B600C98565 /* dataStructure.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA6653572906CEDC00C98565 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA6653602906CEDC00C98565 /* MyTravelmateTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA6653612906CEDC00C98565 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA66536A2906CEDC00C98565 /* MyTravelmateUITests.swift in Sources */,
+				EA66536C2906CEDC00C98565 /* MyTravelmateUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EA66535D2906CEDC00C98565 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA6653492906CEDB00C98565 /* MyTravelmate */;
+			targetProxy = EA66535C2906CEDC00C98565 /* PBXContainerItemProxy */;
+		};
+		EA6653672906CEDC00C98565 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA6653492906CEDB00C98565 /* MyTravelmate */;
+			targetProxy = EA6653662906CEDC00C98565 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		EA66536D2906CEDC00C98565 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EA66536E2906CEDC00C98565 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		EA6653702906CEDC00C98565 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MyTravelmate/MyTravelmate.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MyTravelmate/Preview Content\"";
+				DEVELOPMENT_TEAM = W48GBB265B;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = MyTravelmate;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wip.MyTravelmate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EA6653712906CEDC00C98565 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MyTravelmate/MyTravelmate.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MyTravelmate/Preview Content\"";
+				DEVELOPMENT_TEAM = W48GBB265B;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = MyTravelmate;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wip.MyTravelmate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EA6653732906CEDC00C98565 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W48GBB265B;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wip.MyTravelmateTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyTravelmate.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MyTravelmate";
+			};
+			name = Debug;
+		};
+		EA6653742906CEDC00C98565 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W48GBB265B;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wip.MyTravelmateTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyTravelmate.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MyTravelmate";
+			};
+			name = Release;
+		};
+		EA6653762906CEDC00C98565 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W48GBB265B;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wip.MyTravelmateUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MyTravelmate;
+			};
+			name = Debug;
+		};
+		EA6653772906CEDC00C98565 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W48GBB265B;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wip.MyTravelmateUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MyTravelmate;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EA6653452906CEDB00C98565 /* Build configuration list for PBXProject "MyTravelmate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA66536D2906CEDC00C98565 /* Debug */,
+				EA66536E2906CEDC00C98565 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA66536F2906CEDC00C98565 /* Build configuration list for PBXNativeTarget "MyTravelmate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA6653702906CEDC00C98565 /* Debug */,
+				EA6653712906CEDC00C98565 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA6653722906CEDC00C98565 /* Build configuration list for PBXNativeTarget "MyTravelmateTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA6653732906CEDC00C98565 /* Debug */,
+				EA6653742906CEDC00C98565 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA6653752906CEDC00C98565 /* Build configuration list for PBXNativeTarget "MyTravelmateUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA6653762906CEDC00C98565 /* Debug */,
+				EA6653772906CEDC00C98565 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EA6653422906CEDB00C98565 /* Project object */;
+}
