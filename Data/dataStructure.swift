@@ -14,7 +14,8 @@ struct filterType: Identifiable {
     var status : Bool
 }
 
-struct infoType: Codable {
+struct infoType: Identifiable,Codable {
+    var id : Int
     var title: String
     var description : String
 }

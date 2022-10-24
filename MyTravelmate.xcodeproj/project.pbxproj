@@ -111,7 +111,6 @@
 			isa = PBXGroup;
 			children = (
 				EA66534D2906CEDB00C98565 /* MyTravelmateApp.swift */,
-				EA6653852906D0F500C98565 /* cardView.swift */,
 				EA6653512906CEDC00C98565 /* Assets.xcassets */,
 				EA6653532906CEDC00C98565 /* MyTravelmate.entitlements */,
 				EA6653542906CEDC00C98565 /* Preview Content */,
@@ -150,6 +149,7 @@
 				EA66534F2906CEDB00C98565 /* mainView.swift */,
 				EA6653792906CFDE00C98565 /* filterView.swift */,
 				EA66537B2906D02900C98565 /* cityView.swift */,
+				EA6653852906D0F500C98565 /* cardView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
