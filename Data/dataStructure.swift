@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct filterType: Identifiable {
+struct filterType: Identifiable,Equatable {
     var id = UUID()
     var name : String
     var status : Bool

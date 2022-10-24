@@ -10,10 +10,10 @@ import SwiftUI
 struct cardView: View {
     @Binding var city: cityType
     @State var buttonState: String = "Lifestyle"
-        var body: some View {
+    var body: some View {
         VStack{
             HStack(spacing:20){
-                VStack{
+                VStack(spacing:20){
                     Text("\(city.name)").font(.title)
                     Text("\(city.description)")
                 }

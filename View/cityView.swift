@@ -7,32 +7,64 @@
 
 import SwiftUI
 
-struct CityView: View {
+struct cityView: View {
+    let layout = [GridItem(.fixed(CGFloat(200))),GridItem(.flexible()),]
+    @State var filteredCityList : [cityType] = cityList
+    @State var filterList : [filterType] = [filterType(name:"Culture", status:  false),filterType(name:"Summer", status: false),filterType(name:"Winter", status: false),filterType(name:"Nightlife", status: false)]
     
-    @Binding var filterList: [filterType]
-    @State var filteredCityList : [cityType] = []
     var body: some View {
         
-        let layout = [GridItem(.fixed(CGFloat(200))),GridItem(.flexible()),]
-        ScrollView{
-            LazyVGrid(columns: layout){
-                ForEach($filteredCityList) { $city in
-                    VStack{
-                        NavigationLink(destination: cardView(city:$city), label: {
-                            Image(city.image).resizable().frame(width: 150,height: 150)
-                        }).frame(width: 150,height: 150)
-                        Text(city.name)
+        VStack(spacing:5){
+            Divider().overlay(.gray)
+            ScrollView(.horizontal){
+                HStack(spacing:20){
+                    ForEach($filterList) { $f in
+                        ZStack{
+                            //RoundedRectangle(cornerRadius: 10).frame(width: 70,height: 25)
+                            Toggle(f.name, isOn: $f.status).toggleStyle(.button).tint(.blue)
+                        }
                     }
                 }
             }
-        }.onAppear{
-            var filterOn:[filterType] = checkFilter(filter: filterList)
-            if filterOn.isEmpty {
-                filteredCityList = cityList
-            }else{
-                filteredCityList = applyFilter(filtList: &filterOn, cities: cityList)
+            ScrollView{
+                LazyVGrid(columns: layout){
+                    ForEach($filteredCityList) { $city in
+                        VStack{
+                            NavigationLink(destination: cardView(city:$city), label: {
+                                Image(city.image).resizable().frame(width: 150,height: 150)
+                            }).frame(width: 150,height: 150).clipShape(RoundedRectangle(cornerRadius: 15))
+                            Text(city.name)
+                        }
+                    }
+                }.onChange(of: filterList, perform: { filterList in
+                    var filterOn:[filterType] = checkFilter(filter: filterList)
+                    if filterOn.isEmpty {
+                        filteredCityList = cityList
+                    }else{
+                        filteredCityList = applyFilter(filtList: &filterOn, cities: cityList)
+                    }
+                    
+                })
             }
-        }
+            
+        }}
+    
+    
+}
+
+
+struct CityViewPreviews: PreviewProvider {
+    static var previews: some View {
+        cityView()
+    }
+}
+
+func filterChoice(filteredCityList: inout [cityType],filterList:[filterType]) ->  Void{
+    var filterOn:[filterType] = checkFilter(filter: filterList)
+    if filterOn.isEmpty {
+        filteredCityList = cityList
+    }else{
+        filteredCityList = applyFilter(filtList: &filterOn, cities: cityList)
     }
 }
 
