@@ -15,7 +15,7 @@ struct cityView: View {
     var body: some View {
         
         VStack(spacing:5){
-            Divider().overlay(.gray)
+            Divider().overlay(Color(UIColor(named: "tabColor")!))
             ScrollView(.horizontal){
                 HStack(spacing:20){
                     ForEach($filterList) { $f in
@@ -25,6 +25,7 @@ struct cityView: View {
                     }
                 }
             }
+            Divider()
             ScrollView{
                 LazyVGrid(columns: layout){
                     ForEach($filteredCityList) { $city in

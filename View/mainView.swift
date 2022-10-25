@@ -12,9 +12,7 @@ struct MainView: View {
     var body: some View {
         NavigationView{
             VStack(spacing:40){
-                Divider().frame(height: 45).overlay(.gray)
-//                Rectangle().ignoresSafeArea(edges: .top)
-//                    .frame(height: 60).foregroundColor(.tab)
+                Divider().frame(height: 45).overlay(Color(UIColor(named: "tabColor")!))
                 Text("Make your World!").font(.title).fontWeight(.semibold)
                 ZStack(){
                     Image("world").resizable().frame(width: 320)
@@ -25,7 +23,9 @@ struct MainView: View {
                         Text("Discover the world").foregroundColor(.white)
                     }
                 })
-                NavigationLink("Random Choice",destination: cardView(city: $randomCity)).frame(width: 160,height: 50).background(.blue).clipShape(RoundedRectangle(cornerRadius: 10)).foregroundColor(.white)
+                NavigationLink("Random Choice",destination: cardView(city: $randomCity).onAppear(){
+                    randomCity = cityList.randomElement()!
+                }).frame(width: 160,height: 50).background(.blue).clipShape(RoundedRectangle(cornerRadius: 10)).foregroundColor(.white)
                 NavigationLink("My Trip",destination:EmptyView()).frame(width: 100,height: 40).background(.blue).clipShape(RoundedRectangle(cornerRadius: 10)).foregroundColor(.white).opacity(presentTrip ? 1 : 0)
             }
         }
