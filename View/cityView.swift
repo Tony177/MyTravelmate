@@ -47,9 +47,8 @@ struct cityView: View {
                 })
             }
             
-        }}
-    
-    
+        }
+    }
 }
 
 

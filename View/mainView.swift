@@ -16,6 +16,7 @@ struct MainView: View {
                 Text("Make your World!").font(.title).fontWeight(.semibold)
                 ZStack(){
                     Image("world").resizable().frame(width: 320)
+                    //Text("0%").font(.title).bold().foregroundColor(.white)
                 }
                 NavigationLink(destination:cityView(),label:{
                     ZStack{

@@ -8,17 +8,22 @@
 import SwiftUI
 
 struct cardView: View {
+    
     @Binding var city: cityType
     @State private var buttonState: String = "Lifestyle"
+    
     var body: some View {
+        
         VStack{
+            Divider().overlay(Color(UIColor(named: "tabColor")!))
             HStack(spacing:20){
-                VStack(spacing:20){
+                VStack(){
                     Text("\(city.name)").font(.title)
                     Text("\(city.description)")
                 }
                 Image("\(city.image)").resizable().frame(width: 100,height: 100)
             }
+            Divider()
             HStack(spacing:30){
                 Button("Lifestyle") {
                     buttonState = "Lifestyle"
@@ -30,6 +35,7 @@ struct cardView: View {
                     buttonState = "Food"
                 }.font(.title2)
             }
+            Divider()
             switch buttonState {
             case "Drink":
                 ForEach(city.drink){ d in
@@ -44,6 +50,7 @@ struct cardView: View {
             default:
                 Text("\(city.lifestyle.description)")
             }
+            Spacer()
         }
     }
 }
