@@ -8,6 +8,7 @@
 import SwiftUI
 struct MainView: View {
     @State private var presentTrip = true
+    @State private var randomCity: cityType = cityList.randomElement()!
     var body: some View {
         NavigationView{
             VStack(spacing:40){
@@ -24,19 +25,15 @@ struct MainView: View {
                         Text("Discover the world").foregroundColor(.white)
                     }
                 })
-                
-                NavigationLink("Random Choice",destination: EmptyView()).frame(width: 160,height: 50).background(.blue).clipShape(RoundedRectangle(cornerRadius: 10)).foregroundColor(.white)
+                NavigationLink("Random Choice",destination: cardView(city: $randomCity)).frame(width: 160,height: 50).background(.blue).clipShape(RoundedRectangle(cornerRadius: 10)).foregroundColor(.white)
                 NavigationLink("My Trip",destination:EmptyView()).frame(width: 100,height: 40).background(.blue).clipShape(RoundedRectangle(cornerRadius: 10)).foregroundColor(.white).opacity(presentTrip ? 1 : 0)
             }
         }
     }
 }
 
-/*
- TODO
- 1. Implementare random scelta per Random Choice e sceglierne le dimensioni
- 2. Ridefinire design della city card
- */
+// Random funzionante ma non si randomizza ogni volta
+// Sempre usare ! dopo randomElement() in quanto optional
 
 struct MainViewPreviews: PreviewProvider {
     static var previews: some View {

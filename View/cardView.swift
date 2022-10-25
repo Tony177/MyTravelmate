@@ -9,7 +9,7 @@ import SwiftUI
 
 struct cardView: View {
     @Binding var city: cityType
-    @State var buttonState: String = "Lifestyle"
+    @State private var buttonState: String = "Lifestyle"
     var body: some View {
         VStack{
             HStack(spacing:20){
