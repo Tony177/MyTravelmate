@@ -11,7 +11,7 @@ struct cityView: View {
     let layout = [GridItem(.fixed(CGFloat(200))),GridItem(.flexible()),]
     @State private var filteredCityList : [cityType] = cityList
     @State private var filterList : [filterType] = [filterType(name:"Culture", status:  false),filterType(name:"Summer", status: false),filterType(name:"Winter", status: false),filterType(name:"Nightlife", status: false)]
-    
+    @Binding var myTrips : [tripType]
     var body: some View {
         
         VStack(spacing:5){
@@ -30,7 +30,7 @@ struct cityView: View {
                 LazyVGrid(columns: layout){
                     ForEach($filteredCityList) { $city in
                         VStack{
-                            NavigationLink(destination: cardView(city:$city), label: {
+                            NavigationLink(destination: cardView(city:$city,myTrips: $myTrips), label: {
                                 Image(city.image).resizable().frame(width: 150,height: 150)
                             }).frame(width: 150,height: 150).clipShape(RoundedRectangle(cornerRadius: 15))
                             Text(city.name)
@@ -48,13 +48,6 @@ struct cityView: View {
             }
             
         }
-    }
-}
-
-
-struct CityViewPreviews: PreviewProvider {
-    static var previews: some View {
-        cityView()
     }
 }
 

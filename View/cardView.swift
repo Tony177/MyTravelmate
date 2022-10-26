@@ -10,6 +10,7 @@ import SwiftUI
 struct cardView: View {
     
     @Binding var city: cityType
+    @Binding var myTrips: [tripType]
     @State private var buttonState: String = "Lifestyle"
     
     var body: some View {
@@ -52,6 +53,22 @@ struct cardView: View {
                 Text("\(city.lifestyle.description)").padding()
             }
             Spacer()
+            Button{
+                var found: Bool = false
+                for t in myTrips{
+                    if t.city.id == city.id {
+                        found = true
+                    }}
+                if found == false {
+                    myTrips.append(tripType(city: city, isDone: false))
+                }
+                
+            } label: {
+                VStack(spacing:5){
+                    Image(systemName: "plus").font(.title)
+                    Text("Add to my trip")
+                }
+            }
         }
     }
 }

@@ -14,13 +14,13 @@ struct filterType: Identifiable,Equatable {
     var status : Bool
 }
 
-struct infoType: Identifiable,Codable {
+struct infoType: Identifiable,Codable,Equatable {
     var id : Int
     var title: String
     var description : String
 }
 
-struct cityType: Identifiable,Codable {
+struct cityType: Identifiable,Codable,Equatable {
     var id: Int
     var name: String
     var description : String
@@ -29,6 +29,11 @@ struct cityType: Identifiable,Codable {
     var food : [infoType]
     var drink: [infoType]
     var lifestyle: infoType
+}
+struct tripType : Identifiable,Codable,Equatable {
+    var id = UUID()
+    var city: cityType
+    var isDone: Bool
 }
 
 extension Color {
