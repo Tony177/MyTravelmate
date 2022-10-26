@@ -32,5 +32,6 @@ struct cityType: Identifiable,Codable {
 }
 
 extension Color {
-    static let tab = Color("tabColor")
+    static let tabColor = Color("tabColor")
+    static let buttonColor = Color("buttonColor")
 }

@@ -15,12 +15,12 @@ struct cityView: View {
     var body: some View {
         
         VStack(spacing:5){
-            Divider().overlay(Color(UIColor(named: "tabColor")!))
+            Divider().overlay(Color.tabColor)
             ScrollView(.horizontal){
                 HStack(spacing:20){
                     ForEach($filterList) { $f in
                         ZStack{
-                            Toggle(f.name, isOn: $f.status).toggleStyle(.button).tint(.blue)
+                            Toggle(f.name, isOn: $f.status).toggleStyle(.button).tint(Color.buttonColor)
                         }
                     }
                 }

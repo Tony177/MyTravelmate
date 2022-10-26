@@ -12,22 +12,21 @@ struct MainView: View {
     var body: some View {
         NavigationView{
             VStack(spacing:40){
-                Divider().frame(height: 45).overlay(Color(UIColor(named: "tabColor")!))
-                Text("Make your World!").font(.title).fontWeight(.semibold)
+                Divider().frame(height: 45).overlay(Color.tabColor)
+                Text("Your World!").font(.title).fontWeight(.semibold)
                 ZStack(){
-                    Image("world").resizable().frame(width: 320)
+                    Image("world").resizable().frame(width: 320, height: 320)
                     //Text("0%").font(.title).bold().foregroundColor(.white)
                 }
-                NavigationLink(destination:cityView(),label:{
-                    ZStack{
-                        RoundedRectangle(cornerRadius: 10).frame(width: 200,height: 60)
-                        Text("Discover the world").foregroundColor(.white)
-                    }
-                })
-                NavigationLink("Random Choice",destination: cardView(city: $randomCity).onAppear(){
-                    randomCity = cityList.randomElement()!
-                }).frame(width: 160,height: 50).background(.blue).clipShape(RoundedRectangle(cornerRadius: 10)).foregroundColor(.white)
-                NavigationLink("My Trip",destination:EmptyView()).frame(width: 100,height: 40).background(.blue).clipShape(RoundedRectangle(cornerRadius: 10)).foregroundColor(.white).opacity(presentTrip ? 1 : 0)
+                HStack(spacing: 30){
+                    NavigationLink("Random Choice",destination: cardView(city: $randomCity).onAppear(){
+                        randomCity = cityList.randomElement()!
+                    }).frame(width: 160,height: 50).background(Color.buttonColor).clipShape(RoundedRectangle(cornerRadius: 10)).foregroundColor(.white)
+                    NavigationLink("My Trip",destination:EmptyView()).frame(width: 160,height: 50).background(Color.buttonColor).clipShape(RoundedRectangle(cornerRadius: 10)).foregroundColor(.white).opacity(presentTrip ? 1 : 0)
+                }
+                Spacer()
+                NavigationLink("Discover The Word",destination: cityView()).frame(width: 200,height: 70).background(Color.buttonColor).clipShape(RoundedRectangle(cornerRadius: 10)).foregroundColor(.white)
+            Spacer()
             }
         }
     }

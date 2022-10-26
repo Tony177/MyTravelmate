@@ -15,7 +15,7 @@ struct cardView: View {
     var body: some View {
         
         VStack{
-            Divider().overlay(Color(UIColor(named: "tabColor")!))
+            Divider().overlay(Color.tabColor)
             HStack(spacing:20){
                 VStack(){
                     Text("\(city.name)").font(.title)
