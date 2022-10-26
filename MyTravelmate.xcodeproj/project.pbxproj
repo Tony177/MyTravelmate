@@ -14,7 +14,6 @@
 		EA6653602906CEDC00C98565 /* MyTravelmateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA66535F2906CEDC00C98565 /* MyTravelmateTests.swift */; };
 		EA66536A2906CEDC00C98565 /* MyTravelmateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6653692906CEDC00C98565 /* MyTravelmateUITests.swift */; };
 		EA66536C2906CEDC00C98565 /* MyTravelmateUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA66536B2906CEDC00C98565 /* MyTravelmateUITestsLaunchTests.swift */; };
-		EA66537A2906CFDE00C98565 /* filterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6653792906CFDE00C98565 /* filterView.swift */; };
 		EA66537C2906D02900C98565 /* cityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA66537B2906D02900C98565 /* cityView.swift */; };
 		EA66537E2906D05B00C98565 /* city.json in Resources */ = {isa = PBXBuildFile; fileRef = EA66537D2906D05B00C98565 /* city.json */; };
 		EA6653812906D08300C98565 /* cityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6653802906D08300C98565 /* cityModel.swift */; };
@@ -51,7 +50,6 @@
 		EA6653652906CEDC00C98565 /* MyTravelmateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyTravelmateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA6653692906CEDC00C98565 /* MyTravelmateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTravelmateUITests.swift; sourceTree = "<group>"; };
 		EA66536B2906CEDC00C98565 /* MyTravelmateUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTravelmateUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		EA6653792906CFDE00C98565 /* filterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = filterView.swift; sourceTree = "<group>"; };
 		EA66537B2906D02900C98565 /* cityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cityView.swift; sourceTree = "<group>"; };
 		EA66537D2906D05B00C98565 /* city.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = city.json; sourceTree = "<group>"; };
 		EA6653802906D08300C98565 /* cityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cityModel.swift; sourceTree = "<group>"; };
@@ -147,7 +145,6 @@
 			isa = PBXGroup;
 			children = (
 				EA66534F2906CEDB00C98565 /* mainView.swift */,
-				EA6653792906CFDE00C98565 /* filterView.swift */,
 				EA66537B2906D02900C98565 /* cityView.swift */,
 				EA6653852906D0F500C98565 /* cardView.swift */,
 			);
@@ -307,7 +304,6 @@
 				EA66537C2906D02900C98565 /* cityView.swift in Sources */,
 				EA66534E2906CEDB00C98565 /* MyTravelmateApp.swift in Sources */,
 				EA6653812906D08300C98565 /* cityModel.swift in Sources */,
-				EA66537A2906CFDE00C98565 /* filterView.swift in Sources */,
 				EA6653842906D0B600C98565 /* dataStructure.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,6 +456,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MyTravelmate/MyTravelmate.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MyTravelmate/Preview Content\"";
@@ -484,8 +482,9 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.wip.MyTravelmate;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wip.mytravelmate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -500,6 +499,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MyTravelmate/MyTravelmate.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MyTravelmate/Preview Content\"";
@@ -524,8 +525,9 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.wip.MyTravelmate;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wip.mytravelmate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;

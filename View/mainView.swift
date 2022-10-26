@@ -33,9 +33,6 @@ struct MainView: View {
     }
 }
 
-// Random funzionante ma non si randomizza ogni volta
-// Sempre usare ! dopo randomElement() in quanto optional
-
 struct MainViewPreviews: PreviewProvider {
     static var previews: some View {
         MainView()
