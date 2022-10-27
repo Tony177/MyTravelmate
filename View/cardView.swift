@@ -20,7 +20,7 @@ struct cardView: View {
             HStack(spacing:20){
                 VStack(){
                     Text("\(city.name)").font(.title)
-                    Text("\(city.description)")
+                    Text("\(city.description)").padding()
                 }
                 Image("\(city.image)").resizable().frame(width: 100,height: 100).clipShape(RoundedRectangle(cornerRadius: 15))
             }
@@ -54,21 +54,23 @@ struct cardView: View {
             }
             Spacer()
             Button{
-                var found: Bool = false
-                for t in myTrips{
-                    if t.city.id == city.id {
-                        found = true
-                    }}
-                if found == false {
-                    myTrips.append(tripType(city: city, isDone: false))
-                }
-                
+                savedata()
             } label: {
                 VStack(spacing:5){
                     Image(systemName: "plus").font(.title)
                     Text("Add to my trip")
                 }
             }
+        }
+    }
+    func savedata(){
+        var found: Bool = false
+        for t in myTrips{
+            if t.city.id == city.id {
+                found = true
+            }}
+        if found == false {
+            myTrips.append(tripType(city: city, isDone: false))
         }
     }
 }

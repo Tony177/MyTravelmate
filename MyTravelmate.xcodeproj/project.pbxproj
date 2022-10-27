@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81B68082290A85F000917CC4 /* ProgressBarrView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B68081290A85F000917CC4 /* ProgressBarrView.swift */; };
 		EA66534E2906CEDB00C98565 /* MyTravelmateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA66534D2906CEDB00C98565 /* MyTravelmateApp.swift */; };
 		EA6653502906CEDB00C98565 /* mainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA66534F2906CEDB00C98565 /* mainView.swift */; };
 		EA6653522906CEDC00C98565 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA6653512906CEDC00C98565 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		81B68081290A85F000917CC4 /* ProgressBarrView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarrView.swift; sourceTree = "<group>"; };
 		EA66534A2906CEDB00C98565 /* MyTravelmate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTravelmate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA66534D2906CEDB00C98565 /* MyTravelmateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTravelmateApp.swift; sourceTree = "<group>"; };
 		EA66534F2906CEDB00C98565 /* mainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainView.swift; sourceTree = "<group>"; };
@@ -87,7 +89,7 @@
 		EA6653412906CEDB00C98565 = {
 			isa = PBXGroup;
 			children = (
-				EA66537F2906D06500C98565 /* Data */,
+				EA66537F2906D06500C98565 /* Struttura */,
 				EA6653782906CFD300C98565 /* View */,
 				EA6653822906D09F00C98565 /* Model */,
 				EA66534C2906CEDB00C98565 /* MyTravelmate */,
@@ -150,17 +152,18 @@
 				EA66537B2906D02900C98565 /* cityView.swift */,
 				EA6653852906D0F500C98565 /* cardView.swift */,
 				EA6B1968290964960093C429 /* myTrip.swift */,
+				81B68081290A85F000917CC4 /* ProgressBarrView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		EA66537F2906D06500C98565 /* Data */ = {
+		EA66537F2906D06500C98565 /* Struttura */ = {
 			isa = PBXGroup;
 			children = (
 				EA6653832906D0B600C98565 /* dataStructure.swift */,
 				EA66537D2906D05B00C98565 /* city.json */,
 			);
-			path = Data;
+			path = Struttura;
 			sourceTree = "<group>";
 		};
 		EA6653822906D09F00C98565 /* Model */ = {
@@ -302,6 +305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81B68082290A85F000917CC4 /* ProgressBarrView.swift in Sources */,
 				EA6B1969290964960093C429 /* myTrip.swift in Sources */,
 				EA6653502906CEDB00C98565 /* mainView.swift in Sources */,
 				EA6653862906D0F500C98565 /* cardView.swift in Sources */,

@@ -7,9 +7,9 @@
 
 import Foundation
 
-var cityList: [cityType] = load("city.json")
+var cityList: [cityType] = loadCity("city.json")
 
-func load<T: Decodable>(_ filename: String) -> T {
+func loadCity<T: Decodable>(_ filename: String) -> T {
     let data: Data
     
     guard let file = Bundle.main.url(forResource: filename, withExtension: nil)

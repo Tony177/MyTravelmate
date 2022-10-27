@@ -8,16 +8,30 @@
 import SwiftUI
 
 struct myTripView: View {
+    
     @Binding var myTrips : [tripType]
+    @Binding var city: cityType
+    
     var body: some View {
-        NavigationView{
+        Divider().overlay(Color.tabColor)
+        //NavigationView{
             List {
                 ForEach($myTrips){ $trip in
-                    Toggle(isOn:$trip.isDone,label: {Text(trip.city.name)})
+                    /*Toggle(isOn:$trip.isDone,label: {Text(trip.city.name)})*/
+                    NavigationLink {
+                        cardView(city: $city, myTrips: $myTrips)
+                    } label: {
+                        HStack(spacing: 20){
+                            Toggle(isOn: $trip.isDone) {
+                                Text(trip.city.name)
+                            }
+                        }
+                    }
+
                 }.onDelete(perform: delete)
                 
             }
-        }.navigationTitle("My Trip")
+        //}.navigationTitle("My Trip")
     }
     func delete(at offset: IndexSet ) {
         myTrips.remove(atOffsets: offset)
