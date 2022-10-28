@@ -7,14 +7,14 @@
 
 import SwiftUI
 struct MainView: View {
-    @State var myTrips : [tripType] = {
+    @State var myTrips : [cityType] = {
         do {
         let fileURL = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
             .appendingPathComponent("myPastTrip.json")
 
         let data = try Data(contentsOf: fileURL)
         let decoder = JSONDecoder()
-        let items = try decoder.decode([tripType].self, from: data)
+        let items = try decoder.decode([cityType].self, from: data)
         return items
     } catch {
         print(error.localizedDescription)
@@ -27,7 +27,7 @@ struct MainView: View {
             VStack(spacing:40){
                 Divider().frame(height: 45).overlay(Color.tabColor)
                 Text("Your World!").font(.title).fontWeight(.semibold)
-                ProgressBarrView(myTrip: $myTrips, progress: $progress).frame(width: 350, height: 350)
+                progressBarView(myTripCount: .constant(Double(myTrips.count)) , progress: $progress).frame(width: 350, height: 350)
                 HStack(spacing: 30){
                     NavigationLink("Random Choice",destination: cardView(city: $randomCity,myTrips: $myTrips).onAppear(){
                         randomCity = cityList.randomElement()!

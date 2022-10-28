@@ -10,7 +10,7 @@ import SwiftUI
 struct cardView: View {
     
     @Binding var city: cityType
-    @Binding var myTrips: [tripType]
+    @Binding var myTrips: [cityType]
     @State private var buttonState: String = "Lifestyle"
     
     var body: some View {
@@ -66,14 +66,12 @@ struct cardView: View {
     func savedata(){
         var found: Bool = false
         for t in myTrips{
-            if t.city.id == city.id {
+            if t.id == city.id {
                 found = true
             }}
         if found == false {
-            myTrips.append(tripType(city: city, isDone: false))
+            myTrips.append(city)
             do {
-                let tmp :tripType = tripType(city: city,isDone: false)
-                print(myTrips.last?.city == tmp.city)
                    let fileURL = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
                            .appendingPathComponent("myPastTrip.json")
                     print(fileURL)

@@ -1,15 +1,15 @@
 //
-//  ProgressBarrView.swift
+//  progressBarView.swift
 //  MyTravelmate
 //
-//  Created by Mattia Golino on 27/10/22.
+//  Created by WIP Team on 27/10/22.
 //
 
 import SwiftUI
 
-struct ProgressBarrView: View {
+struct progressBarView: View {
     
-    @Binding var myTrip: [tripType]
+    @Binding var myTripCount: Double
     @Binding var progress : Double
     
     var body: some View {
@@ -30,26 +30,9 @@ struct ProgressBarrView: View {
                 lineCap: .round
             )).rotationEffect(.degrees(-90)).animation(.easeOut, value: progress)
         }.onAppear(){
-                switch myTrip.count{
-                case 1...4:
-                    progress = 0.15
-                case 5...9:
-                    progress = 0.25
-                case 10...12:
-                    progress = 0.30
-                case 13...14:
-                    progress = 0.40
-                case 15...16:
-                    progress = 0.50
-                case 17...19:
-                    progress = 0.75
-                case 20:
-                    progress = 1.0
-                default:
-                    progress = 0.0
-                }
+            progress = Double(round(100*myTripCount/Double(cityList.count)) / 100) // Round number to 2 digits precision ex: 1.24
         }
     }
-    
 }
+
 

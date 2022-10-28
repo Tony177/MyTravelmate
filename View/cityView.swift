@@ -11,7 +11,7 @@ struct cityView: View {
     let layout = [GridItem(.fixed(CGFloat(200))),GridItem(.flexible()),]
     @State private var filteredCityList : [cityType] = cityList
     @State private var filterList : [filterType] = [filterType(name:"Culture", status:  false),filterType(name:"Summer", status: false),filterType(name:"Winter", status: false),filterType(name:"Nightlife", status: false)]
-    @Binding var myTrips : [tripType]
+    @Binding var myTrips : [cityType]
     var body: some View {
         
         VStack(spacing:5){
