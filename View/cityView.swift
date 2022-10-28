@@ -15,7 +15,6 @@ struct cityView: View {
     var body: some View {
         
         VStack(spacing:5){
-            Divider().overlay(Color.tabColor)
             ScrollView(.horizontal){
                 HStack(spacing:20){
                     ForEach($filterList) { $f in
@@ -27,13 +26,14 @@ struct cityView: View {
             }
             Divider()
             ScrollView{
-                LazyVGrid(columns: layout){
+                LazyVGrid(columns: layout,spacing: 30){
                     ForEach($filteredCityList) { $city in
                         VStack{
                             NavigationLink(destination: cardView(city:$city,myTrips: $myTrips), label: {
                                 Image(city.image).resizable().frame(width: 150,height: 150)
                             }).frame(width: 150,height: 150).clipShape(RoundedRectangle(cornerRadius: 15))
                             Text(city.name)
+
                         }
                     }
                 }.onChange(of: filterList, perform: { filterList in

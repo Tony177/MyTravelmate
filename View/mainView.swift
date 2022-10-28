@@ -25,17 +25,27 @@ struct MainView: View {
     var body: some View {
         NavigationView{
             VStack(spacing:40){
-                Divider().frame(height: 45).overlay(Color.tabColor)
-                Text("Your World!").font(.title).fontWeight(.semibold)
-                progressBarView(myTripCount: .constant(Double(myTrips.count)) , progress: $progress).frame(width: 350, height: 350)
-                HStack(spacing: 30){
-                    NavigationLink("Random Choice",destination: cardView(city: $randomCity,myTrips: $myTrips).onAppear(){
-                        randomCity = cityList.randomElement()!
-                    }).frame(width: 160,height: 50).background(Color.buttonColor).clipShape(RoundedRectangle(cornerRadius: 10)).foregroundColor(.white)
-                    NavigationLink("My Trip",destination:myTripView(myTrips:$myTrips, city: $randomCity)).frame(width: 160,height: 50).background(Color.buttonColor).clipShape(RoundedRectangle(cornerRadius: 10)).foregroundColor(.white)
-                }
                 Spacer()
-                NavigationLink("Discover The Word",destination: cityView(myTrips: $myTrips)).frame(width: 200,height: 70).background(Color.buttonColor).clipShape(RoundedRectangle(cornerRadius: 10)).foregroundColor(.white)
+                Text("Your World!").font(.title).fontWeight(.semibold)
+                progressBarView(myTripCount: .constant(Double(myTrips.count)) , progress: $progress).frame(width: 320, height: 320)
+                Spacer()
+                HStack(spacing: 10){
+                    NavigationLink {
+                        cardView(city: $randomCity,myTrips: $myTrips)
+                    } label: {
+                        Text("Random Choice").frame(width: 160,height: 50).background(Color.buttonColor).clipShape(RoundedRectangle(cornerRadius: 10)).foregroundColor(.white)
+                    }
+                    NavigationLink {
+                        myTripView(myTrips:$myTrips, city: $randomCity)
+                    } label: {
+                        Text("MyTrips").frame(width: 160,height: 50).background(Color.buttonColor).clipShape(RoundedRectangle(cornerRadius: 10)).foregroundColor(.white)
+                    }
+                }
+                NavigationLink {
+                    cityView(myTrips: $myTrips)
+                } label: {
+                    Text("Discover the World").frame(width: 330,height: 70).background(Color.buttonColor).clipShape(RoundedRectangle(cornerRadius: 10)).foregroundColor(.white)
+                }
                 Spacer()
             }
         }

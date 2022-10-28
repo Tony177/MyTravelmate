@@ -13,21 +13,21 @@ struct myTripView: View {
     @Binding var city: cityType
     
     var body: some View {
-        Divider().overlay(Color.tabColor)
         List {
-            ForEach($myTrips){ $trip in
-                NavigationLink {
-                    cardView(city: $trip, myTrips: $myTrips)
-                } label: {
-                    HStack(spacing: 20){
-                        Text(trip.name)
-                        
+            Section(header:Text("Visited Places")){
+                ForEach($myTrips){ $trip in
+                    NavigationLink {
+                        cardView(city: $trip, myTrips: $myTrips)
+                    } label: {
+                        HStack(spacing: 20){
+                            Text(trip.name)
+                            
+                        }
                     }
-                }
-                
-            }.onDelete(perform: delete)
-            
-        }.navigationTitle("My Trip")
+                    
+                }.onDelete(perform: delete)
+            }
+        }.navigationTitle("My Trips")
     }
     func delete(at offset: IndexSet ) {
         myTrips.remove(atOffsets: offset)

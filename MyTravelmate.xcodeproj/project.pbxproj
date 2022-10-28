@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		81B68082290A85F000917CC4 /* progressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B68081290A85F000917CC4 /* progressBarView.swift */; };
-		81E64116290BCAF5009EA774 /* myPastTrip.json in Resources */ = {isa = PBXBuildFile; fileRef = 81E64115290BCAF5009EA774 /* myPastTrip.json */; };
 		EA66534E2906CEDB00C98565 /* MyTravelmateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA66534D2906CEDB00C98565 /* MyTravelmateApp.swift */; };
 		EA6653502906CEDB00C98565 /* mainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA66534F2906CEDB00C98565 /* mainView.swift */; };
 		EA6653522906CEDC00C98565 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA6653512906CEDC00C98565 /* Assets.xcassets */; };
@@ -43,7 +42,6 @@
 
 /* Begin PBXFileReference section */
 		81B68081290A85F000917CC4 /* progressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = progressBarView.swift; sourceTree = "<group>"; };
-		81E64115290BCAF5009EA774 /* myPastTrip.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = myPastTrip.json; sourceTree = "<group>"; };
 		EA66534A2906CEDB00C98565 /* MyTravelmate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTravelmate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA66534D2906CEDB00C98565 /* MyTravelmateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTravelmateApp.swift; sourceTree = "<group>"; };
 		EA66534F2906CEDB00C98565 /* mainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainView.swift; sourceTree = "<group>"; };
@@ -164,7 +162,6 @@
 			children = (
 				EA6653832906D0B600C98565 /* dataStructure.swift */,
 				EA66537D2906D05B00C98565 /* city.json */,
-				81E64115290BCAF5009EA774 /* myPastTrip.json */,
 			);
 			path = Struttura;
 			sourceTree = "<group>";
@@ -281,7 +278,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81E64116290BCAF5009EA774 /* myPastTrip.json in Resources */,
 				EA66537E2906D05B00C98565 /* city.json in Resources */,
 				EA6653562906CEDC00C98565 /* Preview Assets.xcassets in Resources */,
 				EA6653522906CEDC00C98565 /* Assets.xcassets in Resources */,
@@ -467,6 +463,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = MyTravelmate/MyTravelmate.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
@@ -487,14 +484,14 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.wip.mytravelmate;
+				PRODUCT_BUNDLE_IDENTIFIER = it.wip.mytravelmate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
@@ -510,6 +507,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = MyTravelmate/MyTravelmate.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
@@ -530,14 +528,14 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.wip.mytravelmate;
+				PRODUCT_BUNDLE_IDENTIFIER = it.wip.mytravelmate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;

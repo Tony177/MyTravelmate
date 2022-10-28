@@ -16,10 +16,9 @@ struct cardView: View {
     var body: some View {
         
         VStack{
-            Divider().overlay(Color.tabColor)
             HStack(spacing:20){
-                VStack(){
-                    Text("\(city.name)").font(.title)
+                VStack(alignment: .leading){
+                    Text("\(city.name)").font(.title).padding()
                     Text("\(city.description)").padding()
                 }
                 Image("\(city.image)").resizable().frame(width: 100,height: 100).clipShape(RoundedRectangle(cornerRadius: 15))
@@ -40,17 +39,17 @@ struct cardView: View {
             switch buttonState {
             case "Drink":
                 ForEach(city.drink){ d in
-                    Text("\(d.title)").padding().font(.title2).fontWeight(.semibold)
-                    Text("\(d.description)").padding()
+                    Text(d.title).padding().font(.title2).fontWeight(.semibold)
+                    Text(d.description).padding()
                 }
             case "Food":
                 ForEach(city.food){ f in
-                    Text("\(f.title)").padding().font(.title2).fontWeight(.semibold)
-                    Text("\(f.description)").padding()
+                    Text(f.title).padding().font(.title2).fontWeight(.semibold)
+                    Text(f.description).padding()
                 }
             default:
-                Text("\(city.lifestyle.title)").padding().font(.title2).fontWeight(.semibold)
-                Text("\(city.lifestyle.description)").padding()
+                Text(city.lifestyle.title).padding().font(.title2).fontWeight(.semibold)
+                Text(city.lifestyle.description).padding()
             }
             Spacer()
             Button{
@@ -72,14 +71,14 @@ struct cardView: View {
         if found == false {
             myTrips.append(city)
             do {
-                   let fileURL = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
-                           .appendingPathComponent("myPastTrip.json")
-                    print(fileURL)
-                   let encoder = JSONEncoder()
-                   try encoder.encode(myTrips).write(to: fileURL)
-               } catch {
-                   print(error.localizedDescription)
-               }
+                let fileURL = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+                    .appendingPathComponent("myPastTrip.json")
+                print(fileURL)
+                let encoder = JSONEncoder()
+                try encoder.encode(myTrips).write(to: fileURL)
+            } catch {
+                print(error.localizedDescription)
+            }
         }
     }
 }
