@@ -71,6 +71,17 @@ struct cardView: View {
             }}
         if found == false {
             myTrips.append(tripType(city: city, isDone: false))
+            do {
+                let tmp :tripType = tripType(city: city,isDone: false)
+                print(myTrips.last?.city == tmp.city)
+                   let fileURL = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+                           .appendingPathComponent("myPastTrip.json")
+                    print(fileURL)
+                   let encoder = JSONEncoder()
+                   try encoder.encode(myTrips).write(to: fileURL)
+               } catch {
+                   print(error.localizedDescription)
+               }
         }
     }
 }

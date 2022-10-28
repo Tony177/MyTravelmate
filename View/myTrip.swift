@@ -19,7 +19,7 @@ struct myTripView: View {
                 ForEach($myTrips){ $trip in
                     /*Toggle(isOn:$trip.isDone,label: {Text(trip.city.name)})*/
                     NavigationLink {
-                        cardView(city: $city, myTrips: $myTrips)
+                        cardView(city: $trip.city, myTrips: $myTrips)
                     } label: {
                         HStack(spacing: 20){
                             Toggle(isOn: $trip.isDone) {

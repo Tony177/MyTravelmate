@@ -7,7 +7,19 @@
 
 import SwiftUI
 struct MainView: View {
-    @State var myTrips : [tripType] = []
+    @State var myTrips : [tripType] = {
+        do {
+        let fileURL = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+            .appendingPathComponent("myPastTrip.json")
+
+        let data = try Data(contentsOf: fileURL)
+        let decoder = JSONDecoder()
+        let items = try decoder.decode([tripType].self, from: data)
+        return items
+    } catch {
+        print(error.localizedDescription)
+        return []
+    }}()
     @State private var randomCity: cityType = cityList.randomElement()!
     @State private var progress = 0.0
     var body: some View {
@@ -15,19 +27,7 @@ struct MainView: View {
             VStack(spacing:40){
                 Divider().frame(height: 45).overlay(Color.tabColor)
                 Text("Your World!").font(.title).fontWeight(.semibold)
-                ZStack(){
-                    switch progress{
-                    case 0.25...0.49:
-                        Image("world2").resizable().frame(width: 320, height: 320)
-                    case 0.50...0.74:
-                        Image("world3").resizable().frame(width: 320, height: 320)
-                    case 0.75...1.0:
-                        Image("world4").resizable().frame(width: 320, height: 320)
-                    default:
-                        Image("world1").resizable().frame(width: 320, height: 320)
-                    }
-                    ProgressBarrView(progress: progress).frame(width: 350, height: 350)
-                }
+                ProgressBarrView(myTrip: $myTrips, progress: $progress).frame(width: 350, height: 350)
                 HStack(spacing: 30){
                     NavigationLink("Random Choice",destination: cardView(city: $randomCity,myTrips: $myTrips).onAppear(){
                         randomCity = cityList.randomElement()!

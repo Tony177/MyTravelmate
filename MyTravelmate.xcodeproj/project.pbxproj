@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		81B68082290A85F000917CC4 /* ProgressBarrView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B68081290A85F000917CC4 /* ProgressBarrView.swift */; };
+		81E64116290BCAF5009EA774 /* myPastTrip.json in Resources */ = {isa = PBXBuildFile; fileRef = 81E64115290BCAF5009EA774 /* myPastTrip.json */; };
 		EA66534E2906CEDB00C98565 /* MyTravelmateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA66534D2906CEDB00C98565 /* MyTravelmateApp.swift */; };
 		EA6653502906CEDB00C98565 /* mainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA66534F2906CEDB00C98565 /* mainView.swift */; };
 		EA6653522906CEDC00C98565 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA6653512906CEDC00C98565 /* Assets.xcassets */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		81B68081290A85F000917CC4 /* ProgressBarrView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarrView.swift; sourceTree = "<group>"; };
+		81E64115290BCAF5009EA774 /* myPastTrip.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = myPastTrip.json; sourceTree = "<group>"; };
 		EA66534A2906CEDB00C98565 /* MyTravelmate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTravelmate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA66534D2906CEDB00C98565 /* MyTravelmateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTravelmateApp.swift; sourceTree = "<group>"; };
 		EA66534F2906CEDB00C98565 /* mainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainView.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 			children = (
 				EA6653832906D0B600C98565 /* dataStructure.swift */,
 				EA66537D2906D05B00C98565 /* city.json */,
+				81E64115290BCAF5009EA774 /* myPastTrip.json */,
 			);
 			path = Struttura;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81E64116290BCAF5009EA774 /* myPastTrip.json in Resources */,
 				EA66537E2906D05B00C98565 /* city.json in Resources */,
 				EA6653562906CEDC00C98565 /* Preview Assets.xcassets in Resources */,
 				EA6653522906CEDC00C98565 /* Assets.xcassets in Resources */,
