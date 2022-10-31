@@ -19,37 +19,58 @@ struct cardView: View {
             HStack(spacing:20){
                 VStack(alignment: .leading){
                     Text("\(city.name)").font(.title).padding()
-                    Text("\(city.description)").padding()
+                    Text("\(city.description)").padding().fixedSize(horizontal: false, vertical: true)
                 }
                 Image("\(city.image)").resizable().frame(width: 100,height: 100).clipShape(RoundedRectangle(cornerRadius: 15))
             }
             Divider()
             HStack(spacing:30){
+                Spacer()
                 Button("Lifestyle") {
                     buttonState = "Lifestyle"
-                }.font(.title2)
-                Button("Drink") {
-                    buttonState = "Drink"
-                }.font(.title2)
+                }.font(.title3)
+                Spacer()
+                Button("To Do") {
+                    buttonState = "To Do"
+                }.font(.title3)
+                Spacer()
                 Button("Food") {
                     buttonState = "Food"
-                }.font(.title2)
+                }.font(.title3)
+                Spacer()
             }
             Divider()
             switch buttonState {
-            case "Drink":
-                ForEach(city.drink){ d in
-                    Text(d.title).padding().font(.title2).fontWeight(.semibold)
-                    Text(d.description).padding()
+            case "To Do":
+                ScrollView{
+                    ForEach(city.toDo){ d in
+                        ZStack{
+                            RoundedRectangle(cornerRadius: 25, style: .continuous).fill(.white).shadow(radius: 10)
+                            VStack{
+                                Text(d.title).padding().font(.title2).fontWeight(.semibold)
+                                Text(d.description).padding()
+                            }
+                        }
+                    }
                 }
             case "Food":
-                ForEach(city.food){ f in
-                    Text(f.title).padding().font(.title2).fontWeight(.semibold)
-                    Text(f.description).padding()
+                ScrollView{
+                    ForEach(city.food){ f in
+                        ZStack{
+                            RoundedRectangle(cornerRadius: 25, style: .continuous).fill(.white).shadow(radius: 10)
+                            VStack{
+                                Text(f.title).padding().font(.title2).fontWeight(.semibold)
+                                Text(f.description).padding()
+                            }
+                        }
+                    }
+
                 }
             default:
-                Text(city.lifestyle.title).padding().font(.title2).fontWeight(.semibold)
-                Text(city.lifestyle.description).padding()
+                ScrollView{
+                    Text(city.lifestyle.title).padding().font(.title)
+                    Text(city.lifestyle.description).padding()
+                }
             }
             Spacer()
             Button{

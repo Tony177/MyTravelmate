@@ -18,11 +18,11 @@ struct progressBarView: View {
             case 0.25...0.49:
                 Image("world2").resizable().frame(width: 300, height: 300)
             case 0.50...0.74:
-                Image("world3").resizable().frame(width: 310, height: 310)
+                Image("world3").resizable().frame(width: 300, height: 300)
             case 0.75...1.0:
-                Image("world4").resizable().frame(width: 310, height: 310)
+                Image("world4").resizable().frame(width: 300, height: 300)
             default:
-                Image("world1").resizable().frame(width: 320, height: 320)
+                Image("world1").resizable().frame(width: 300, height: 300)
             }
             Circle().stroke(Color.tabColor.opacity(0.5),lineWidth: 22)
             Circle().trim(from: 0, to: progress).stroke(Color.buttonColor, style: StrokeStyle(

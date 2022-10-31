@@ -27,7 +27,7 @@ struct cityType: Identifiable,Codable,Equatable {
     var tag : [String]
     var image: String
     var food : [infoType]
-    var drink: [infoType]
+    var toDo: [infoType]
     var lifestyle: infoType
 }
 struct tripType : Identifiable,Codable,Equatable {
@@ -40,3 +40,4 @@ extension Color {
     static let tabColor = Color("tabColor")
     static let buttonColor = Color("buttonColor")
 }
+
