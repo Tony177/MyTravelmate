@@ -11,7 +11,7 @@ import SwiftUI
 struct MyTravelmateApp: App {
     var body: some Scene {
         WindowGroup {
-            MainView()
+            MainView().preferredColorScheme(.light)
         }
     }
 }

@@ -17,11 +17,10 @@ struct myTripView: View {
             Section(header:Text("Visited Places")){
                 ForEach($myTrips){ $trip in
                     NavigationLink {
-                        cardView(city: $trip, myTrips: $myTrips)
+                        cardView(city: $trip, myTrips: $myTrips).preferredColorScheme(.light)
                     } label: {
                         HStack(spacing: 20){
                             Text(trip.name)
-                            
                         }
                     }
                     

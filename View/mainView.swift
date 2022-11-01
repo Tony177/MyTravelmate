@@ -27,22 +27,22 @@ struct MainView: View {
             VStack(spacing:40){
                 Spacer()
                 Text("Your World!").font(.title).fontWeight(.semibold)
-                progressBarView(myTripCount: .constant(Double(myTrips.count)) , progress: $progress).frame(width: 320, height: 320)
+                progressBarView(myTripCount: .constant(Double(myTrips.count)) , progress: $progress).frame(width: 320, height: 320).preferredColorScheme(.light)
                 Spacer()
                 HStack(spacing: 10){
                     NavigationLink {
-                        cardView(city: $randomCity,myTrips: $myTrips)
+                        cardView(city: $randomCity,myTrips: $myTrips).preferredColorScheme(.light)
                     } label: {
                         Text("Random Choice").frame(width: 160,height: 50).background(Color.buttonColor).clipShape(RoundedRectangle(cornerRadius: 10)).foregroundColor(.white)
                     }
                     NavigationLink {
-                        myTripView(myTrips:$myTrips, city: $randomCity)
+                        myTripView(myTrips:$myTrips, city: $randomCity).preferredColorScheme(.light)
                     } label: {
                         Text("MyTrips").frame(width: 160,height: 50).background(Color.buttonColor).clipShape(RoundedRectangle(cornerRadius: 10)).foregroundColor(.white)
                     }
                 }
                 NavigationLink {
-                    cityView(myTrips: $myTrips)
+                    cityView(myTrips: $myTrips).preferredColorScheme(.light)
                 } label: {
                     Text("Discover the World").frame(width: 330,height: 70).background(Color.buttonColor).clipShape(RoundedRectangle(cornerRadius: 10)).foregroundColor(.white)
                 }
@@ -54,6 +54,6 @@ struct MainView: View {
 
 struct MainViewPreviews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        MainView().preferredColorScheme(.light)
     }
 }

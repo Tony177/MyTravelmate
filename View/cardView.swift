@@ -7,11 +7,14 @@
 
 import SwiftUI
 
+
+
 struct cardView: View {
     
     @Binding var city: cityType
     @Binding var myTrips: [cityType]
     @State private var buttonState: String = "Lifestyle"
+    @State var showToast = false
     
     var body: some View {
         
@@ -28,15 +31,15 @@ struct cardView: View {
                 Spacer()
                 Button("Lifestyle") {
                     buttonState = "Lifestyle"
-                }.font(.title3)
+                }.font(.title3).foregroundColor(Color.buttonColor)
                 Spacer()
                 Button("To Do") {
                     buttonState = "To Do"
-                }.font(.title3)
+                }.font(.title3).foregroundColor(Color.buttonColor)
                 Spacer()
                 Button("Food") {
                     buttonState = "Food"
-                }.font(.title3)
+                }.font(.title3).foregroundColor(Color.buttonColor)
                 Spacer()
             }
             Divider()
@@ -75,11 +78,14 @@ struct cardView: View {
             Spacer()
             Button{
                 savedata()
+                showToast = true
             } label: {
                 VStack(spacing:5){
                     Image(systemName: "plus").font(.title)
                     Text("Add to my trip")
                 }
+            }.alert("Added", isPresented: $showToast) {
+                Button("OK", role: .cancel) { }
             }
         }
     }
@@ -103,3 +109,4 @@ struct cardView: View {
         }
     }
 }
+

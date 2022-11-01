@@ -29,7 +29,7 @@ struct cityView: View {
                 LazyVGrid(columns: layout,spacing: 30){
                     ForEach($filteredCityList) { $city in
                         VStack{
-                            NavigationLink(destination: cardView(city:$city,myTrips: $myTrips), label: {
+                            NavigationLink(destination: cardView(city:$city,myTrips: $myTrips).preferredColorScheme(.light), label: {
                                 Image(city.image).resizable().frame(width: 150,height: 150)
                             }).frame(width: 150,height: 150).clipShape(RoundedRectangle(cornerRadius: 15))
                             Text(city.name)
