@@ -89,7 +89,7 @@
 		EA6653412906CEDB00C98565 = {
 			isa = PBXGroup;
 			children = (
-				EA66537F2906D06500C98565 /* Struttura */,
+				EA66537F2906D06500C98565 /* Structure */,
 				EA6653782906CFD300C98565 /* View */,
 				EA6653822906D09F00C98565 /* Model */,
 				EA66534C2906CEDB00C98565 /* MyTravelmate */,
@@ -157,13 +157,13 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		EA66537F2906D06500C98565 /* Struttura */ = {
+		EA66537F2906D06500C98565 /* Structure */ = {
 			isa = PBXGroup;
 			children = (
 				EA6653832906D0B600C98565 /* dataStructure.swift */,
 				EA66537D2906D05B00C98565 /* city.json */,
 			);
-			path = Struttura;
+			path = Structure;
 			sourceTree = "<group>";
 		};
 		EA6653822906D09F00C98565 /* Model */ = {
@@ -470,7 +470,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MyTravelmate/Preview Content\"";
-				DEVELOPMENT_TEAM = 4TH2649S46;
+				DEVELOPMENT_TEAM = W48GBB265B;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -491,7 +491,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.wip.mytravelmate;
+				PRODUCT_BUNDLE_IDENTIFIER = it.wip.mytravelmate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
@@ -514,7 +514,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MyTravelmate/Preview Content\"";
-				DEVELOPMENT_TEAM = 4TH2649S46;
+				DEVELOPMENT_TEAM = W48GBB265B;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -535,7 +535,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.wip.mytravelmate;
+				PRODUCT_BUNDLE_IDENTIFIER = it.wip.mytravelmate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;

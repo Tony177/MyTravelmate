@@ -14,17 +14,16 @@ struct cardView: View {
     @Binding var city: cityType
     @Binding var myTrips: [cityType]
     @State private var buttonState: String = "Lifestyle"
-    @State var showToast = false
+    @State var pressed = false
     
     var body: some View {
-        
         VStack{
             HStack(spacing:20){
                 VStack(alignment: .leading){
                     Text("\(city.name)").font(.title).padding()
                     Text("\(city.description)").padding().fixedSize(horizontal: false, vertical: true)
                 }
-                Image("\(city.image)").resizable().frame(width: 100,height: 100).clipShape(RoundedRectangle(cornerRadius: 15))
+                Image("\(city.image)").resizable().frame(width: 100,height: 100).clipShape(RoundedRectangle(cornerRadius: 15)).padding(.trailing)
             }
             Divider()
             HStack(spacing:30){
@@ -51,9 +50,10 @@ struct cardView: View {
                             RoundedRectangle(cornerRadius: 25, style: .continuous).fill(.white).shadow(radius: 10)
                             VStack{
                                 Text(d.title).padding().font(.title2).fontWeight(.semibold)
-                                Text(d.description).padding()
+                                Divider()
+                                Text(d.description).padding().fontWeight(.light)
                             }
-                        }
+                        }.padding(.top).padding(.horizontal)
                     }
                 }
             case "Food":
@@ -63,11 +63,12 @@ struct cardView: View {
                             RoundedRectangle(cornerRadius: 25, style: .continuous).fill(.white).shadow(radius: 10)
                             VStack{
                                 Text(f.title).padding().font(.title2).fontWeight(.semibold)
-                                Text(f.description).padding()
+                                Divider()
+                                Text(f.description).padding().fontWeight(.light)
                             }
-                        }
+                        }.padding(.top).padding(.horizontal)
                     }
-
+                    
                 }
             default:
                 ScrollView{
@@ -77,19 +78,26 @@ struct cardView: View {
             }
             Spacer()
             Button{
-                savedata()
-                showToast = true
+                if(!(savedata())){
+                    pressed = true
+                }
+               /*DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5) {
+                    pressed = false
+                }*/
             } label: {
                 VStack(spacing:5){
-                    Image(systemName: "plus").font(.title)
+                    Image(systemName: "plus" ).font(.title)//.opacity(pressed ? 0.0 : 1.0)
                     Text("Add to my trip")
+                    //Text(pressed ? "Successfully added \(city.name)!" : "Add to my trip")
                 }
-            }.alert("Added", isPresented: $showToast) {
-                Button("OK", role: .cancel) { }
-            }
+            }//.buttonStyle(CustomBS()).foregroundColor(pressed ? .green : .blue)
+                .alert("Successfully added \(city.name)!", isPresented: $pressed) {
+                            Button("OK", role: .cancel) { }
+                        }
         }
     }
-    func savedata(){
+    
+    func savedata() -> Bool{
         var found: Bool = false
         for t in myTrips{
             if t.id == city.id {
@@ -107,6 +115,7 @@ struct cardView: View {
                 print(error.localizedDescription)
             }
         }
+        return found
     }
 }
 

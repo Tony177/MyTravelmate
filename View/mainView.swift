@@ -34,6 +34,8 @@ struct MainView: View {
                         cardView(city: $randomCity,myTrips: $myTrips).preferredColorScheme(.light)
                     } label: {
                         Text("Random Choice").frame(width: 160,height: 50).background(Color.buttonColor).clipShape(RoundedRectangle(cornerRadius: 10)).foregroundColor(.white)
+                    }.onAppear(){
+                        randomCity = cityList.randomElement()!
                     }
                     NavigationLink {
                         myTripView(myTrips:$myTrips, city: $randomCity).preferredColorScheme(.light)
