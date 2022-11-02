@@ -77,33 +77,29 @@ struct cardView: View {
                 }
             }
             Spacer()
+            
             Button{
-                if(!(savedata())){
-                    pressed = true
-                }
-               /*DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5) {
+                savedata()
+                pressed = true
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5) {
                     pressed = false
-                }*/
+                }
             } label: {
                 VStack(spacing:5){
-                    Image(systemName: "plus" ).font(.title)//.opacity(pressed ? 0.0 : 1.0)
-                    Text("Add to my trip")
-                    //Text(pressed ? "Successfully added \(city.name)!" : "Add to my trip")
+                    Image(systemName: "plus" ).font(.title).opacity(pressed ? 0.0 : 1.0)
+                    Text(pressed ? "Successfully added \(city.name)!" : "Add to my trip")
                 }
-            }//.buttonStyle(CustomBS()).foregroundColor(pressed ? .green : .blue)
-                .alert("Successfully added \(city.name)!", isPresented: $pressed) {
-                            Button("OK", role: .cancel) { }
-                        }
+            }.buttonStyle(CustomBS()).foregroundColor(pressed ? .green : .blue)
         }
     }
     
-    func savedata() -> Bool{
+    func savedata(){
         var found: Bool = false
         for t in myTrips{
             if t.id == city.id {
                 found = true
             }}
-        if found == false {
+        if !found {
             myTrips.append(city)
             do {
                 let fileURL = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
@@ -115,7 +111,6 @@ struct cardView: View {
                 print(error.localizedDescription)
             }
         }
-        return found
     }
 }
 

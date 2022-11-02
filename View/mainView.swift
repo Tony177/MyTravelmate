@@ -23,7 +23,7 @@ struct MainView: View {
     @State private var randomCity: cityType = cityList.randomElement()!
     @State private var progress = 0.0
     var body: some View {
-        NavigationView{
+        NavigationStack{
             VStack(spacing:40){
                 Spacer()
                 Text("Your World!").font(.title).fontWeight(.semibold)
