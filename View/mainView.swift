@@ -33,20 +33,20 @@ struct MainView: View {
                     NavigationLink {
                         cardView(city: $randomCity,myTrips: $myTrips).preferredColorScheme(.light)
                     } label: {
-                        Text("Random Choice").frame(width: 160,height: 50).background(Color.buttonColor).clipShape(RoundedRectangle(cornerRadius: 10)).foregroundColor(.white)
+                        Text("Random Choice").font(.title3).frame(width: 160,height: 50).background(Color.buttonColor).clipShape(RoundedRectangle(cornerRadius: 10)).foregroundColor(.white)
                     }.onAppear(){
                         randomCity = cityList.randomElement()!
                     }
                     NavigationLink {
                         myTripView(myTrips:$myTrips, city: $randomCity).preferredColorScheme(.light)
                     } label: {
-                        Text("MyTrips").frame(width: 160,height: 50).background(Color.buttonColor).clipShape(RoundedRectangle(cornerRadius: 10)).foregroundColor(.white)
+                        Text("MyTrips").font(.title3).frame(width: 160,height: 50).background(Color.buttonColor).clipShape(RoundedRectangle(cornerRadius: 10)).foregroundColor(.white)
                     }
                 }
                 NavigationLink {
                     cityView(myTrips: $myTrips).preferredColorScheme(.light)
                 } label: {
-                    Text("Discover the World").frame(width: 330,height: 70).background(Color.buttonColor).clipShape(RoundedRectangle(cornerRadius: 10)).foregroundColor(.white)
+                    Text("Discover the World").font(.title2).frame(width: 330,height: 70).background(Color.buttonColor).clipShape(RoundedRectangle(cornerRadius: 10)).foregroundColor(.white)
                 }
                 Spacer()
             }

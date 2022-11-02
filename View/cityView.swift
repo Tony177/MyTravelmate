@@ -34,7 +34,7 @@ struct cityView: View {
                                 }).frame(width: 150,height: 150).clipShape(RoundedRectangle(cornerRadius: 15))
                                 Text(city.name)
                                 
-                            }
+                            }.padding()
                         }
                     }.onChange(of: filterList, perform: { filterList in
                         var filterOn:[filterType] = checkFilter(filter: filterList)

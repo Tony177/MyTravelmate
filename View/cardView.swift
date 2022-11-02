@@ -13,38 +13,30 @@ struct cardView: View {
     
     @Binding var city: cityType
     @Binding var myTrips: [cityType]
-    @State private var buttonState: String = "Lifestyle"
+    @State private var buttonState: Int = 0
     @State var pressed = false
     @State var added : Bool = false
     
     var body: some View {
         VStack{
-            HStack(spacing:20){
-                VStack(alignment: .leading){
-                    Text("\(city.name)").font(.title).padding()
-                    Text("\(city.description)").padding().fixedSize(horizontal: false, vertical: true)
-                }
-                Image("\(city.image)").resizable().frame(width: 100,height: 100).clipShape(RoundedRectangle(cornerRadius: 15)).padding(.trailing)
+            HStack(){
+                VStack(){
+                    Text("\(city.name)").font(.title).fontWeight(.bold).frame(maxWidth: .infinity,alignment: .leading)
+                    Text("\(city.description)").frame(maxWidth: .infinity,alignment: .leading).fontWeight(.light)
+                }.padding()
+                Spacer()
+                Image("\(city.image)").resizable().frame(width: 120,height: 120).clipShape(RoundedRectangle(cornerRadius: 15)).padding()
             }
-            Divider()
             HStack(spacing:30){
-                Spacer()
-                Button("Lifestyle") {
-                    buttonState = "Lifestyle"
-                }.font(.title3).foregroundColor(Color.buttonColor)
-                Spacer()
-                Button("To Do") {
-                    buttonState = "To Do"
-                }.font(.title3).foregroundColor(Color.buttonColor)
-                Spacer()
-                Button("Food") {
-                    buttonState = "Food"
-                }.font(.title3).foregroundColor(Color.buttonColor)
-                Spacer()
+                Picker("What do you want to see?", selection: $buttonState){
+                    Text("Lifestyle").tag(0)
+                    Text("To Do").tag(1)
+                    Text("Food").tag(2)
+                }.pickerStyle(.segmented).padding()
             }
-            Divider()
+
             switch buttonState {
-            case "To Do":
+            case 1:
                 ScrollView{
                     ForEach(city.toDo){ d in
                         ZStack{
@@ -57,7 +49,7 @@ struct cardView: View {
                         }.padding(.top).padding(.horizontal)
                     }
                 }
-            case "Food":
+            case 2:
                 ScrollView{
                     ForEach(city.food){ f in
                         ZStack{
@@ -73,7 +65,7 @@ struct cardView: View {
                 }
             default:
                 ScrollView{
-                    Text(city.lifestyle.title).padding().font(.title).frame(maxWidth: .infinity,alignment: .leading)
+                    Text(city.lifestyle.title).padding().font(.title2).fontWeight(.semibold).frame(maxWidth: .infinity,alignment: .leading)
                     Text(city.lifestyle.description).padding()
                 }
             }
@@ -91,7 +83,7 @@ struct cardView: View {
                 }
             } label: {
                 VStack(spacing:5){
-                    Image(systemName: "plus" ).font(.title).opacity(added ? 0.0 : pressed ? 0.0 : 1.0)
+                    Image(systemName: "plus" ).font(.title3).opacity(added ? 0.0 : pressed ? 0.0 : 1.0)
                         Text(added ? "\(city.name) already added" : pressed ? "Successfully added \(city.name)!" : "Add to my trip")
                 }
             }.buttonStyle(CustomBS()).foregroundColor(added ? .red : pressed ? .green : .blue)
