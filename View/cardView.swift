@@ -82,11 +82,11 @@ struct cardView: View {
                     added = false
                 }
             } label: {
-                VStack(spacing:5){
-                    Image(systemName: "plus" ).font(.title3).opacity(added ? 0.0 : pressed ? 0.0 : 1.0)
-                        Text(added ? "\(city.name) already added" : pressed ? "Successfully added \(city.name)!" : "Add to my trip")
+                VStack(){
+                    Text(added ? "\(city.name) already added" : pressed ? "\(city.name) added!" : "Add trip").font(.title3).frame(width: 330,height: 50).background(Color.buttonColor).clipShape(RoundedRectangle(cornerRadius: 10))
+
                 }
-            }.buttonStyle(CustomBS()).foregroundColor(added ? .red : pressed ? .green : .blue)
+            }.buttonStyle(CustomBS()).foregroundColor(added ? .red : pressed ? .green : .white)
         }
     }
     

@@ -11,7 +11,6 @@ struct MainView: View {
         do {
         let fileURL = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
             .appendingPathComponent("myPastTrip.json")
-
         let data = try Data(contentsOf: fileURL)
         let decoder = JSONDecoder()
         let items = try decoder.decode([cityType].self, from: data)
