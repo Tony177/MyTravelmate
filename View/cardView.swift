@@ -49,7 +49,7 @@ struct cardView: View {
                         ZStack{
                             RoundedRectangle(cornerRadius: 25, style: .continuous).fill(.white).shadow(radius: 10)
                             VStack{
-                                Text(d.title).padding().font(.title2).fontWeight(.semibold)
+                                Text(d.title).padding().font(.title2).fontWeight(.semibold).frame(maxWidth: .infinity,alignment: .leading)
                                 Divider()
                                 Text(d.description).padding().fontWeight(.light)
                             }
@@ -62,7 +62,7 @@ struct cardView: View {
                         ZStack{
                             RoundedRectangle(cornerRadius: 25, style: .continuous).fill(.white).shadow(radius: 10)
                             VStack{
-                                Text(f.title).padding().font(.title2).fontWeight(.semibold)
+                                Text(f.title).padding().font(.title2).fontWeight(.semibold).frame(maxWidth: .infinity,alignment: .leading)
                                 Divider()
                                 Text(f.description).padding().fontWeight(.light)
                             }
@@ -72,7 +72,7 @@ struct cardView: View {
                 }
             default:
                 ScrollView{
-                    Text(city.lifestyle.title).padding().font(.title)
+                    Text(city.lifestyle.title).padding().font(.title).frame(maxWidth: .infinity,alignment: .leading)
                     Text(city.lifestyle.description).padding()
                 }
             }
