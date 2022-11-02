@@ -16,7 +16,6 @@ struct cardView: View {
     @State private var buttonState: String = "Lifestyle"
     @State var pressed = false
     @State var added : Bool = false
-    @State var button : Bool = false
     
     var body: some View {
         VStack{
@@ -83,22 +82,19 @@ struct cardView: View {
             Button{
                 if(!(savedata())){
                     pressed = true
-                    button = true
                 }else{
-                    button = true
                     added = true
                 }
                 DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5) {
                     pressed = false
                     added = false
-                    button = false
                 }
             } label: {
                 VStack(spacing:5){
-                    Image(systemName: "plus" ).font(.title).opacity(button ? 0.0 : 1.0)
+                    Image(systemName: "plus" ).font(.title).opacity(added ? 0.0 : pressed ? 0.0 : 1.0)
                         Text(added ? "\(city.name) already added" : pressed ? "Successfully added \(city.name)!" : "Add to my trip")
                 }
-            }.buttonStyle(CustomBS()).foregroundColor(added ? .red : pressed ? .green: .blue)
+            }.buttonStyle(CustomBS()).foregroundColor(added ? .red : pressed ? .green : .blue)
         }
     }
     
